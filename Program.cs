@@ -23,7 +23,7 @@ namespace AplusB
             File.WriteAllText(inputpath, string.Join(" ", reada, readb));
 
 
-
+             
 
 
 
