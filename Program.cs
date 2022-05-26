@@ -16,19 +16,14 @@ namespace AplusB
 
 
 
-            string reada = Console.ReadLine();
-            string readb = Console.ReadLine();
+           
             FileStream fs = new FileStream(inputpath, FileMode.OpenOrCreate);
             fs.Close();
-            File.WriteAllText(inputpath, string.Join(" ", reada, readb));
+            FileStream fsout = new FileStream(outputpath, FileMode.OpenOrCreate);
+            fsout.Close();
 
 
-             
-
-
-
-            StreamReader fstake = new StreamReader(inputpath, Encoding.Unicode);
-
+           
             int[] arr = File.ReadAllText(inputpath).Split(' ').Select(n => int.Parse(n)).ToArray();
             File.WriteAllText(outputpath, string.Join(" ", arr[0] + arr[1]));
         }
